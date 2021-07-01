@@ -1,0 +1,16 @@
+<!-- This should be replaced in production. -->
+<Configuration>
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout pattern="[%d] %p %m (%c)%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="warn">
+            <AppenderRef ref="Console" />
+        </Root>
+        <Logger name="com.apollo" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+    </Loggers>
+</Configuration>
